@@ -36,6 +36,7 @@ class EnergyAnalyzer:
     
     def generate_sample_data(self, days=365):
         """Generate sample energy consumption data for demonstration"""
+        np.random.seed(42)
         dates = pd.date_range(end=datetime.now(), periods=days*24, freq='H')
         
         # Simulate realistic energy consumption patterns

@@ -132,6 +132,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@eboekenh](https://github.com/eboekenh)
 - Location: Berlin, Germany
 
+## Key Findings (Sample Data)
+
+When run with the built-in sample data generator (365 days × 24 hours):
+
+| Metric | Value |
+|--------|-------|
+| Total Annual Consumption | ~653,000 kWh |
+| Average Daily Consumption | ~1,789 kWh |
+| Peak Hourly Consumption | ~130 kWh |
+| Temperature-Consumption Correlation | Moderate negative (r ≈ -0.15) |
+
+**Patterns observed:**
+- **Hourly:** Consumption peaks during evening hours (18:00–21:00) and dips in early morning (03:00–05:00)
+- **Monthly:** Higher consumption in winter months due to heating demand
+- **Weekday vs Weekend:** Slightly lower consumption on weekends
+
+*These results are from synthetic data. With real energy data (e.g., from SMARD or OPSD), patterns will reflect actual grid behavior.*
+
 ## 🔧 Future Enhancements
 
 - [ ] Add predictive modeling capabilities
