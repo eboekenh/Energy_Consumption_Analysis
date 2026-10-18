@@ -69,9 +69,11 @@ class EnergyAnalyzer:
             print("No data loaded. Please load or generate data first.")
             return None
         
+        daily_totals = self.df.groupby(self.df['timestamp'].dt.date)['consumption_kwh'].sum()
+
         stats = {
             'Total Consumption (kWh)': self.df['consumption_kwh'].sum(),
-            'Average Daily Consumption (kWh)': self.df['consumption_kwh'].mean() * 24,
+            'Average Daily Consumption (kWh)': daily_totals.mean(),
             'Peak Consumption (kWh)': self.df['consumption_kwh'].max(),
             'Minimum Consumption (kWh)': self.df['consumption_kwh'].min(),
             'Standard Deviation': self.df['consumption_kwh'].std()
